@@ -1,4 +1,4 @@
-name: Done
+name: Test
 env:
   REPO_OWNER: rtuteja15o9
   REPO_NAME: example-event-dispatcher-workflows
@@ -7,9 +7,9 @@ on:
   repository_dispatch:
     types: [run-test]
 jobs:
-  done:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install packages
-        run: echo ${command}
+      - name: echo
+        run: echo ${client_payload} && echo rahul
